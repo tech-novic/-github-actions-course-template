@@ -20,5 +20,5 @@ jobs:
         
       - name: build container image
         run: |
-          docker build -t cloudyuta-private-test:dev-fe .
+          docker build -t  ${{ secrets.DOCKER_HUB_USERNAME }}/cloudyuta-private-test .
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/cloudyuta-private-test:dev-fe
